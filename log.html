@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>製作日誌｜17.5 吋望遠鏡計畫</title>
+  <meta name="description" content="清大天文社 17.5 吋望遠鏡的製作進度與日誌：里程碑、每一次加工、組裝與觀測的紀錄。">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="log.css">
+  <link rel="alternate" type="application/rss+xml" title="17.5 吋望遠鏡製作日誌" href="feed.xml">
+  <script>
+    // 記錄 progress.js 的語法錯誤，讓頁面能提示是哪一行
+    window.addEventListener('error', function (e) {
+      if (e.filename && e.filename.indexOf('progress.js') !== -1) window.PROGRESS_ERROR = { line: e.lineno, msg: e.message };
+    });
+  </script>
+</head>
+<body class="log-page">
+  <canvas id="sky" aria-hidden="true"></canvas>
+
+  <header class="nav scrolled" id="nav">
+    <a class="brand" href="index.html"><img src="img/logo.png" alt="">清大天文 · 17.5″</a>
+    <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#story">鏡片的故事</a>
+      <a href="index.html#design">望遠鏡設計</a>
+      <a href="index.html#science">科學觀測</a>
+      <a href="log.html" aria-current="page">製作日誌</a>
+      <a href="index.html#team">團隊</a>
+      <a href="index.html#join" class="nav-cta">支持我們</a>
+    </nav>
+  </header>
+
+  <main id="logPage">
+    <section class="section log-head">
+      <p class="eyebrow">製作日誌</p>
+      <h1>從一面鏡子，到一支望遠鏡</h1>
+      <p class="lede">我們把每一次設計、加工、組裝和觀測都記在這裡。這份日誌既是給大家看的進度，也是留給下一屆的技術紀錄。</p>
+      <div class="subscribe">
+        <a class="btn ghost" href="feed.xml" id="rssLink">訂閱 RSS</a>
+        <span>把這個連結貼到 Feedly、Inoreader 等 RSS 閱讀器，有新日誌就會通知你。</span>
+      </div>
+
+      <div class="overall" id="overall"></div>
+    </section>
+
+    <section class="section" id="milestones-sec">
+      <div class="section-head">
+        <h2>里程碑</h2>
+      </div>
+      <div class="milestones" id="milestones"></div>
+    </section>
+
+    <section class="section" id="entries-sec">
+      <div class="section-head">
+        <h2>日誌</h2>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="依標籤篩選"></div>
+      <ol class="entries" id="entries"></ol>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" type="button" aria-label="關閉">×</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+  </div>
+
+  <footer>
+    <img src="img/logo.png" alt="清華天文 NTHU Astronomy since 1971">
+    <p>清華大學天文社 × 清華大學天文台 · 17.5 吋牛頓反射式望遠鏡建置計畫</p>
+    <p class="small">© <span id="year"></span> NTHU Astronomy Club</p>
+  </footer>
+
+  <script src="data/progress.js"></script>
+  <script src="script.js"></script>
+  <script src="log.js"></script>
+</body>
+</html>

@@ -77,13 +77,15 @@ const budget = [
   ['遮光罩', 2000]
 ];
 const barsEl = document.getElementById('budgetBars');
-const max = Math.max(...budget.map(b => b[1]));
-barsEl.innerHTML = budget.map(([name, amt]) => `
-  <div class="bar-row">
-    <span class="label">${name}</span>
-    <div class="bar-track"><div class="bar-fill" data-w="${(amt / max * 100).toFixed(1)}"></div></div>
-    <span class="amt">${amt.toLocaleString('zh-TW')}</span>
-  </div>`).join('');
+if (barsEl) {
+  const max = Math.max(...budget.map(b => b[1]));
+  barsEl.innerHTML = budget.map(([name, amt]) => `
+    <div class="bar-row">
+      <span class="label">${name}</span>
+      <div class="bar-track"><div class="bar-fill" data-w="${(amt / max * 100).toFixed(1)}"></div></div>
+      <span class="amt">${amt.toLocaleString('zh-TW')}</span>
+    </div>`).join('');
+}
 
 // ===== 數字跳動 =====
 function countUp(el) {

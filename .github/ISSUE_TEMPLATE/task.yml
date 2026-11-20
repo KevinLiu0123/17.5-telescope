@@ -1,0 +1,37 @@
+name: 工作項目
+description: 新增一件要做的事（加工、採購、測試、活動……）
+body:
+  - type: dropdown
+    id: phase
+    attributes:
+      label: 屬於哪個階段
+      options:
+        - 1 · 設計與規劃
+        - 2 · 採購與組裝
+        - 3 · 校準與觀測
+        - 4 · 成果與推廣
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 要做什麼
+      description: 目標、規格、需要的材料或預算
+      placeholder: 例：主鏡座 6061 鋁板 CNC 加工，圖檔 design/parts/mirror-cell.step
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 怎樣算完成
+      placeholder: 例：零件到貨、尺寸量測誤差 < 0.1 mm
+  - type: input
+    id: due
+    attributes:
+      label: 預計完成日期
+      placeholder: 2026-12-15
+  - type: textarea
+    id: refs
+    attributes:
+      label: 參考資料
+      description: 連結、照片、報價單都可以直接拖進來

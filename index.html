@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="log.css">
+  <link rel="alternate" type="application/rss+xml" title="17.5 吋望遠鏡製作日誌" href="feed.xml">    
 </head>
 <body>
   <canvas id="sky" aria-hidden="true"></canvas>
@@ -23,6 +25,7 @@
       <a href="#science">科學觀測</a>
       <a href="#outreach">科普推廣</a>
       <a href="#plan">計畫時程</a>
+      <a href="log.html">製作日誌</a> 
       <a href="#team">團隊</a>
       <a href="#join" class="nav-cta">支持我們</a>
     </nav>
@@ -223,10 +226,21 @@
       </div>
     </section>
 
+      <!-- PROGRESS（內容來自 data/progress.js） -->
+    <section id="progress" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">06 · 製作進度</p>
+        <h2>我們現在做到哪裡了</h2>
+        <p>每一次設計、加工、組裝與觀測，都會記錄在製作日誌裡。</p>
+      </div>
+      <div class="progress-mini reveal" id="progressMini"></div>
+    </section>
+    
+       
     <!-- TEAM -->
     <section id="team" class="section">
       <div class="section-head reveal">
-        <p class="eyebrow">06 · 團隊</p>
+        <p class="eyebrow">07 · 團隊</p>
         <h2>做這支望遠鏡的人</h2>
       </div>
       <div class="team">
@@ -237,8 +251,8 @@
       </div>
       <div class="advisors reveal">
         <p><span>指導老師</span>清華大學天文研究所 張祥光 教授、賴詩萍 教授</p>
-        <p><span>執行單位</span>清華大學天文社、清華大學天文台</p>
-        <p><span>技術合作</span>GSO 冠昇光學</p>
+        <p><span>執行單位</span>清華大學天文社、<a href="https://nthuobs.phys.nthu.edu.tw/tw" target="_blank" rel="noopener">清華大學天文台</a></p>
+
       </div>
     </section>
 
@@ -247,10 +261,9 @@
       <h2>一起把這段歷史完成</h2>
       <p>無論你是當年參與過的學長姊、對天文有興趣的同學，或是想支持學生自製科學儀器的朋友——歡迎追蹤我們，參加觀星活動，或與我們聯繫募款與合作。</p>
       <div class="join-actions">
-        <a class="btn" href="https://www.instagram.com/nthuastro/" target="_blank" rel="noopener">Instagram @nthuastro</a>
-        <!-- 在這裡填入 Facebook 粉專網址後取消註解：
-        <a class="btn ghost" href="https://www.facebook.com/你的粉專" target="_blank" rel="noopener">Facebook 粉專</a>
-        -->
+        <a class="btn" href="https://www.instagram.com/nthuastroclub/" target="_blank" rel="noopener">Instagram @nthuastro</a>
+        <a class="btn ghost" href="https://www.facebook.com/nthuobs/" target="_blank" rel="noopener">天文台 Facebook</a>
+        <a class="btn ghost" href="https://nthuobs.phys.nthu.edu.tw/tw" target="_blank" rel="noopener">清大天文台網站</a>
       </div>
     </section>
   </main>
@@ -260,8 +273,10 @@
     <p>清華大學天文社 × 清華大學天文台 · 17.5 吋牛頓反射式望遠鏡建置計畫</p>
     <p class="small">© <span id="year"></span> NTHU Astronomy Club</p>
   </footer>
-
+  <script>window.addEventListener('error',function(e){if(e.filename&&e.filename.indexOf('progress.js')!==-1)window.PROGRESS_ERROR={line:e.lineno,msg:e.message};});</script>
+  <script src="data/progress.js"></script>
   <script src="script.js"></script>
+  <script src="log.js"></script>
   <script src="viewer.bundle.js"></script>
 </body>
 </html>
