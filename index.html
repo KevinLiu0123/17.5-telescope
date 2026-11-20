@@ -99,8 +99,13 @@
 
       <div class="design-grid">
         <figure class="design-hero reveal">
-          <img src="img/telescope-full.jpg" alt="望遠鏡整體 3D 結構圖：上下環狀結構以碳纖維管連接" loading="lazy">
-          <figcaption>整體結構：前段、中段、後段，以碳纖維管連接，外覆遮光布</figcaption>
+          <div class="viewer" id="viewer3d">
+            <img class="viewer-poster" src="img/telescope-full.jpg" alt="望遠鏡整體 3D 結構圖：上下環狀結構以碳纖維管連接">
+            <span class="viewer-status">3D 模型</span>
+            <span class="viewer-hint">拖曳旋轉 · 滾輪／雙指縮放</span>
+            <button class="viewer-reset" type="button">重設視角</button>
+          </div>
+          <figcaption>互動 3D 模型：前段、中段、後段以碳纖維管連接，外覆遮光布</figcaption>
         </figure>
 
         <div class="tabs reveal" role="tablist" aria-label="鏡筒分段">
@@ -257,5 +262,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="viewer.bundle.js"></script>
 </body>
 </html>
