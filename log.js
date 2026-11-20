@@ -107,6 +107,25 @@
     lb.addEventListener('click', ev => { if (ev.target === lb || ev.target.closest('.lb-close')) close(); });
     addEventListener('keydown', ev => { if (ev.key === 'Escape' && !lb.hidden) close(); });
 
+    // 訂閱面板
+    const dlg = document.getElementById('subDialog');
+    if (dlg) {
+      const feed = new URL('feed.xml', location.href).href;
+      document.getElementById('subUrl').value = feed;
+      document.getElementById('subInoreader').href = 'https://www.inoreader.com/?add_feed=' + encodeURIComponent(feed);
+      document.getElementById('subFeedly').href = 'https://feedly.com/i/subscription/feed%2F' + encodeURIComponent(feed);
+      document.getElementById('subBtn').addEventListener('click', () => dlg.showModal());
+      document.getElementById('subClose').addEventListener('click', () => dlg.close());
+      dlg.addEventListener('click', ev => { if (ev.target === dlg) dlg.close(); });
+      const copyBtn = document.getElementById('subCopyBtn'), input = document.getElementById('subUrl');
+      copyBtn.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(feed); }
+        catch (e) { input.select(); document.execCommand('copy'); }
+        copyBtn.textContent = '已複製 ✓';
+        setTimeout(() => (copyBtn.textContent = '複製'), 2000);
+      });
+    }
+
     if (location.hash) { const el = document.querySelector(location.hash); if (el) setTimeout(() => el.scrollIntoView(), 50); }
   }
 

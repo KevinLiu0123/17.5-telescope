@@ -116,3 +116,23 @@
   .ov-legend { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .ov-seg i.doing { animation: none; } }
+
+/* 訂閱面板 */
+.sub-dialog {
+  margin: auto; width: min(520px, calc(100% - 32px)); padding: 28px 28px 24px;
+  background: var(--bg-2); color: var(--ink); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.sub-dialog::backdrop { background: rgba(4, 5, 16, .8); }
+.sub-dialog h2 { font-size: 1.4rem; margin-bottom: 10px; }
+.sub-dialog p { color: var(--muted); font-size: .94rem; }
+.sub-dialog .lb-close { top: 8px; right: 8px; font-size: 1.6rem; }
+.sub-readers { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 10px; }
+.sub-readers .btn { padding: 10px 20px; }
+.sub-small { font-size: .82rem !important; margin-bottom: 20px; }
+.sub-label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 6px; }
+.sub-copy { display: flex; gap: 8px; }
+.sub-copy input {
+  flex: 1; min-width: 0; font: inherit; font-size: 16px; color: var(--ink);
+  background: rgba(255, 255, 255, .05); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;
+}
+.sub-copy .btn { padding: 8px 16px; white-space: nowrap; }

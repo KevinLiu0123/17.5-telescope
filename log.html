@@ -41,8 +41,8 @@
       <h1>從一面鏡子，到一支望遠鏡</h1>
       <p class="lede">我們把每一次設計、加工、組裝和觀測都記在這裡。這份日誌既是給大家看的進度，也是留給下一屆的技術紀錄。</p>
       <div class="subscribe">
-        <a class="btn ghost" href="feed.xml" id="rssLink">訂閱 RSS</a>
-        <span>把這個連結貼到 Feedly、Inoreader 等 RSS 閱讀器，有新日誌就會通知你。</span>
+        <button class="btn ghost" type="button" id="subBtn">訂閱更新</button>
+        <span>有新日誌時自動通知你</span>
       </div>
 
       <div class="overall" id="overall"></div>
@@ -63,6 +63,22 @@
       <ol class="entries" id="entries"></ol>
     </section>
   </main>
+
+  <dialog class="sub-dialog" id="subDialog" aria-labelledby="subTitle">
+    <button class="lb-close" type="button" id="subClose" aria-label="關閉">×</button>
+    <h2 id="subTitle">訂閱製作日誌</h2>
+    <p>用 RSS 閱讀器訂閱，我們每寫一則新日誌，你的閱讀器就會自動收到。不用註冊我們的任何東西，也不會收到廣告。</p>
+    <div class="sub-readers">
+      <a class="btn" id="subInoreader" target="_blank" rel="noopener">加入 Inoreader</a>
+      <a class="btn" id="subFeedly" target="_blank" rel="noopener">加入 Feedly</a>
+    </div>
+    <p class="sub-small">兩個都是免費的 RSS 閱讀器，有網頁版和手機 app，用 Google 帳號就能登入。</p>
+    <label class="sub-label" for="subUrl">已經有其他閱讀器？複製這個訂閱網址貼上即可：</label>
+    <div class="sub-copy">
+      <input id="subUrl" type="text" readonly>
+      <button class="btn ghost" type="button" id="subCopyBtn">複製</button>
+    </div>
+  </dialog>
 
   <div class="lightbox" id="lightbox" hidden>
     <button class="lb-close" type="button" aria-label="關閉">×</button>
