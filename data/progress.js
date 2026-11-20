@@ -48,13 +48,13 @@ window.PROGRESS = {
     { phase: 1, title: "主鏡量測與歷史考證",           status: "done",  date: "2022-11" },
     { phase: 1, title: "鏡筒 3D 結構設計（Fusion 360）", status: "done",  date: "" },
     { phase: 1, title: "完成計畫書與預算",             status: "done",  date: "" },
-    { phase: 1, title: "確認 GSO 冠昇光學技術合作",     status: "doing", date: "" },
+    
 
-    { phase: 2, title: "募款與歷屆社員交流活動",         status: "todo",  date: "" },
-    { phase: 2, title: "採購赤道儀、相機與光學配件",     status: "todo",  date: "" },
-    { phase: 2, title: "鏡筒零件 CNC 加工",            status: "todo",  date: "" },
-    { phase: 2, title: "三段鏡筒組裝",                 status: "todo",  date: "" },
-    { phase: 2, title: "第一次光軸校正",               status: "todo",  date: "" },
+    { phase: 2, title: "募款與歷屆社員交流活動",         status: "doing",  date: "" },
+    { phase: 2, title: "採購赤道儀、相機與光學配件",     status: "doing",  date: "" },
+    { phase: 2, title: "鏡筒零件 CNC 加工",            status: "done",  date: "" },
+    { phase: 2, title: "三段鏡筒組裝",                 status: "done",  date: "" },
+    { phase: 2, title: "第一次光軸校正",               status: "doing",  date: "" },
 
     { phase: 3, title: "First Light 第一道星光",       status: "todo",  date: "" },
     { phase: 3, title: "測光精度與追蹤測試",            status: "todo",  date: "" },
@@ -63,7 +63,7 @@ window.PROGRESS = {
 
     { phase: 4, title: "成果發表",                     status: "todo",  date: "" },
     { phase: 4, title: "首場以 17.5 吋為主角的觀星活動", status: "todo",  date: "" },
-    { phase: 4, title: "納入星空之子天文營教學",        status: "todo",  date: "" }
+    { phase: 4, title: "未來計畫",        status: "todo",  date: "" }
   ],
 
   /* ---------- 日誌：新的寫在最上面 ---------- */
